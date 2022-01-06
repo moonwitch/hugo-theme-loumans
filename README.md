@@ -1,13 +1,14 @@
-# Pickles ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mismith0227/hugo_theme_pickles/create%20new%20branch?style=flat-square) ![GitHub](https://img.shields.io/github/license/mismith0227/hugo_theme_pickles?style=flat-square) [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+# Loumans; a simple first try at Hugo theming. 
 
-Pickles is a modern, simple and beautiful Hugo theme.
+The mood of Loumans is inspired on Veerle Duoh's [vintage beer poster](https://veerle.duoh.com/inspiration/big-smoke-brewery-x). This dictated the base color scheme for the site:
 
-![screenshot](https://github.com/mismith0227/hugo_theme_pickles/blob/master/images/screenshot.png)
+![Colorscheme](.\docs\images\2022-01-06-22-33-45.png)
+
+It is originally a fork of Pickles; a gorgeous simple theme which can be obtained [here](https://github.com/mismith0227/hugo_theme_pickles).
 
 ## Overview
 
 - Modern, Simple and beautiful design
-- Medium's Image Zoom（[zooming](https://desmonding.me/zooming/docs/#/))
 - Social links（Twitter,Facebook,Instagram,Google+,GitHub,GitLab,npm,Codepen,Dribbble,500px,Flickr,Pinterest,Tumblr,Vimeo,YouTube,Linkedin）
 - Support for Related Content
 - Support for tags
@@ -15,18 +16,10 @@ Pickles is a modern, simple and beautiful Hugo theme.
 - Responsive design
 - SVG Sprite
 
-Use short code for Image Zoom.
-
-```
-{{< zoom-img src="/images/default.jpg" >}}
-```
 
 ## Features
 
-- gulp
-- webpack
 - Sass
-- Babel
 - SVG Sprite
 - Standard
 
@@ -35,84 +28,16 @@ Use short code for Image Zoom.
 In your hugo site directory, run:
 
 ```shell
-$ mkdir themes
-$ cd themes
-$ git clone -b release https://github.com/mismith0227/hugo_theme_pickles
+$ git submodule add https://github.com/moonwitch/hugo-theme-loumans .themes/
 ```
-
-Or download it from the release branch
-
-[release](https://github.com/mismith0227/hugo_theme_pickles/tree/release)
 
 ## Usage
 
-Use hugo's -t hugo_theme_pickles or --theme=hugo_theme_pickles option with hugo commands. Example:
+Use hugo's -t hugo-theme-loumans or --theme=-theme-loumans option with hugo commands. 
+Example:
 
 ```shell
-$ hugo server -t hugo_theme_pickles -w -D
-```
-
-## Configuration
-
-You may specify following options in `config.toml` of your site to make use of
-this theme's features.
-
-For getting started with Pickles, copy the [config.toml](https://github.com/mismith0227/hugo_theme_pickles/blob/master/exampleSite/config.toml) file from the exampleSite directory inside Pickles’s repository to your site repository.
-
-```shell
-$ cp themes/hugo_theme_pickles/exampleSite/config.toml .
-```
-
-Now, you can start editing this file and add your own information!
-
-## Customisation
-
-To hide the date in any post, set the `hideDate` parameter in the front matter:
-
-```
----
-hideDate: true
----
-```
-
-You can use `hideWordCount` and `headReadingTime` to hide word count and reading time on both, the posts and the post list.
-
-```
----
-hideWordCount: true
-hideReadingTime: true
----
-```
-
-## Contributing
-
-Pull requests, bug fixes and new features are welcome!
-
-Please create feature branches from [develop](https://github.com/mismith0227/hugo_theme_pickles/tree/develop) and submit a PR for any change.
-
-## Development
-
-1.  Install Node modules
-
-```sh
-yarn
-```
-
-1.  Run gulp. You don't need to install gulp globally.
-
-```
-// Development
-$ yarn run dev
-$ // On another tab
-$ yarn run hugo
-
-// Production (compress)
-$ yarn run prod
-$ // On another tab
-$ yarn run hugo
-
-// Build
-$ yarn run build
+$ hugo server -t -theme-loumans -w -D
 ```
 
 ## License
