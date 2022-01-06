@@ -2,7 +2,7 @@
 
 The mood of Loumans is inspired on Veerle Duoh's [vintage beer poster](https://veerle.duoh.com/inspiration/big-smoke-brewery-x). This dictated the base color scheme for the site:
 
-![Colorscheme](.\docs\images\2022-01-06-22-33-45.png)
+![Colorscheme](./docs/images/2022-01-06-22-33-45.png)
 
 It is originally a fork of Pickles; a gorgeous simple theme which can be obtained [here](https://github.com/mismith0227/hugo_theme_pickles).
 
