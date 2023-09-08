@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
-  {{- partial "head.html" . -}}
+  <head>
+    <title>{{ .Title }}</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="{{ .Description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{ $styles := resources.Get "scss/main.scss" | resources.ToCSS |
+    resources.Minify | resources.Fingerprint }}
+    <link
+      rel="stylesheet"
+      href="{{ $styles.RelPermalink }}"
+      integrity="{{ $styles.Data.Integrity }}"
+    />
+  </head>
   <body>
-    {{- partial "header.html" . -}}
-    <div id="content">{{- block "main" . }}{{- end }}</div>
-    {{- partial "footer.html" . -}} {{- partial "feather.html" . -}}
+    <header>{{ partial "header.html" . }}}}</header>
+    <main>{{ block "main" . }}{{ end }}</main>
+    <footer>{{ partial "footer.html" .}}</footer>
+    {{ partial "feather.html" .}}
   </body>
 </html>

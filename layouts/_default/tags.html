@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <h1>Tag Cloud</h1>
+  <div id="tag-cloud">
+    {{ $tags := $.Site.Taxonomies.tags }}
+    {{ range $key, $value := $tags.ByCount }}
+      <a href="{{ "tags/" | relLangURL }}{{ $key | urlize }}" style="font-size: {{ mul .Count 1.5 }}px;">{{ $key }}</a>
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,0 +1,18 @@
+//Import Normalize
+@import url(https://yarnpkg.com/en/package/normalize.css);
+
+//Import Variables
+@import "variables";
+
+body {
+  background-color: $morandi-grey;
+  color: $morandi-blue;
+}
+
+header {
+  background-color: $morandi-green;
+}
+
+footer {
+  background-color: $morandi-pink;
+}
